@@ -1075,7 +1075,7 @@ class Elementor_Post_Grid_Widget extends Widget_Base {
 
 			}
 			?>
-			<div class="wpcap-grid-container elementor-grid <?php echo $columns_desktop.$columns_tablet.$columns_mobile.$grid_class; ?>">
+			<div class="wpcap-grid-container elementor-grid <?php echo esc_attr( $columns_desktop . $columns_tablet . $columns_mobile . $grid_class ); ?>">
 
 				<?php
 
