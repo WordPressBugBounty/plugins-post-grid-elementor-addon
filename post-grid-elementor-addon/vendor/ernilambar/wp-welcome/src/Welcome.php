@@ -101,13 +101,40 @@ class Welcome {
 	protected $sidebar_callback = null;
 
 	/**
+	 * Product name.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	protected $product_name;
+
+	/**
+	 * Product slug.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	protected $product_slug;
+
+	/**
+	 * Product version.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	protected $product_version;
+
+	/**
 	 * Constructor.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @param string $mode Mode; theme or plugin.
 	 * @param string $slug Plugin or theme slug.
-	 * @param array $extra_data Extra data.
+	 * @param array  $extra_data Extra data.
 	 */
 	public function __construct( $mode, $slug, $extra_data = array() ) {
 		if ( ! in_array( $mode, array( 'plugin', 'theme', 'custom' ), true ) ) {
@@ -227,7 +254,7 @@ class Welcome {
 			echo '<div class="notice notice-' . esc_attr( $this->admin_notice['type'] ) . '">';
 			$this->render_notice();
 			echo '</div><!-- .notice -->';
-		};
+		}
 	}
 
 	/**
@@ -351,7 +378,12 @@ class Welcome {
 			return;
 		}
 
-		echo '<div class="wrap wpw-wrap" id="wp-welcome-wrap">';
+		$wrap_attrs = array(
+			'id'    => 'wp-welcome-wrap',
+			'class' => array( 'wrap', 'wpw-wrap', sanitize_title( $this->page['menu_slug'] ) . '-wrap' ),
+		);
+
+		echo '<div ' . Utils::render_attr( $wrap_attrs, false ) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		View::render_header( $this );
 
@@ -478,9 +510,9 @@ class Welcome {
 	 * @since 1.0.0
 	 *
 	 * @param array   $args Sidebar box arguments.
-	 * @param Welcome $object Instance of Welcome.
+	 * @param Welcome $obj Instance of Welcome.
 	 */
-	public function render_sidebar_box( $args, $object ) {
+	public function render_sidebar_box( $args, $obj ) {
 		$defaults = array(
 			'class'           => '',
 			'title'           => esc_html__( 'Box Title', 'wp-welcome' ),
@@ -496,7 +528,7 @@ class Welcome {
 
 		$args = wp_parse_args( $args, $defaults );
 
-		View::render_sidebar_box( $args, $object );
+		View::render_sidebar_box( $args, $obj );
 	}
 
 	/**

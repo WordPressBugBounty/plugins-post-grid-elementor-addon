@@ -7,16 +7,47 @@
 
 namespace Nilambar\Welcome;
 
-if ( ! class_exists( Init_1_0_5::class, false ) ) {
+if ( ! class_exists( Init_2_0_2::class, false ) ) {
 
-	class Init_1_0_5 {
+	/**
+	 * Init class.
+	 *
+	 * @since 1.0.0
+	 */
+	class Init_2_0_2 {
 
-		const VERSION = '1.0.5';
+		/**
+		 * Version.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var string
+		 */
+		const VERSION = '2.0.2';
 
-		const PRIORITY = 9994;
+		/**
+		 * Priority.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var int
+		 */
+		const PRIORITY = 9988;
 
+		/**
+		 * Instance.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var object
+		 */
 		public static $single_instance = null;
 
+		/**
+		 * Create singleton instance.
+		 *
+		 * @since 1.0.0
+		 */
 		public static function initiate() {
 			if ( null === self::$single_instance ) {
 				self::$single_instance = new self();
@@ -24,6 +55,11 @@ if ( ! class_exists( Init_1_0_5::class, false ) ) {
 			return self::$single_instance;
 		}
 
+		/**
+		 * Constructor.
+		 *
+		 * @since 1.0.0
+		 */
 		private function __construct() {
 			if ( ! defined( 'WP_WELCOME_LOADED' ) ) {
 				define( 'WP_WELCOME_LOADED', self::PRIORITY );
@@ -33,6 +69,11 @@ if ( ! class_exists( Init_1_0_5::class, false ) ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
 		}
 
+		/**
+		 * Includes library files.
+		 *
+		 * @since 1.0.0
+		 */
 		public function include_lib() {
 			if ( class_exists( Welcome::class, false ) ) {
 				return;
@@ -76,10 +117,10 @@ if ( ! class_exists( Init_1_0_5::class, false ) ) {
 				'wp-welcome-scripts',
 				'WPW_OBJECT',
 				array(
-					'ajax_url'      => admin_url( 'admin-ajax.php' ),
-					'storage_key'   => $this->get_unique_id( 'wpw-' ) . '-activetab',
-					'admin_nonce'   => wp_create_nonce( 'wpw_installer_nonce' ),
-					'i18n' => array(
+					'ajax_url'    => admin_url( 'admin-ajax.php' ),
+					'storage_key' => $this->get_unique_id( 'wpw-' ) . '-activetab',
+					'admin_nonce' => wp_create_nonce( 'wpw_installer_nonce' ),
+					'i18n'        => array(
 						'activate'        => esc_html__( 'Activate', 'wp-welcome' ),
 						'activated'       => esc_html__( 'Activated', 'wp-welcome' ),
 						'install_now'     => esc_html__( 'Install Now', 'wp-welcome' ),
@@ -103,5 +144,5 @@ if ( ! class_exists( Init_1_0_5::class, false ) ) {
 		}
 	}
 
-	Init_1_0_5::initiate();
+	Init_2_0_2::initiate();
 }
