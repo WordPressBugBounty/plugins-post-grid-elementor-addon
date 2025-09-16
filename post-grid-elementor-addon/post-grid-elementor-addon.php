@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Post Grid Elementor Addon
- * Description: Elementor page builder addon to display posts in a grid. Useful for generating post grid from your blog posts with multiple options.
+ * Plugin Name: Post Grid Addon for Elementor
+ * Description: Addon for the Elementor page builder to display posts in a grid. Useful for generating post grid from your blog posts with multiple options.
  * Plugin URI: https://wphait.com/plugins/post-grid-elementor-addon/
- * Version: 2.0.21
+ * Version: 2.0.22
  * Author: WP Hait
  * Author URI: https://wphait.com/
  * Text Domain: post-grid-elementor-addon
@@ -11,7 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'PGEA_VERSION', '2.0.21' );
+define( 'PGEA_VERSION', '2.0.22' );
 define( 'PGEA_SLUG', 'post-grid-elementor-addon' );
 define( 'PGEA_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 define( 'PGEA_URI', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
@@ -152,7 +152,7 @@ final class Elementor_Post_Grid {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'post-grid-elementor-addon' ),
-			'<strong>' . esc_html__( 'Post Grid Elementor Addon', 'post-grid-elementor-addon' ) . '</strong>',
+			'<strong>' . esc_html__( 'Post Grid Addon for Elementor', 'post-grid-elementor-addon' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'post-grid-elementor-addon' ) . '</strong>'
 		);
 
@@ -175,7 +175,7 @@ final class Elementor_Post_Grid {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'post-grid-elementor-addon' ),
-			'<strong>' . esc_html__( 'Post Grid Elementor Addon', 'post-grid-elementor-addon' ) . '</strong>',
+			'<strong>' . esc_html__( 'Post Grid Addon for Elementor', 'post-grid-elementor-addon' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'post-grid-elementor-addon' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -199,7 +199,7 @@ final class Elementor_Post_Grid {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'post-grid-elementor-addon' ),
-			'<strong>' . esc_html__( 'Post Grid Elementor Addon', 'post-grid-elementor-addon' ) . '</strong>',
+			'<strong>' . esc_html__( 'Post Grid Addon for Elementor', 'post-grid-elementor-addon' ) . '</strong>',
 			'<strong>' . esc_html__( 'PHP', 'post-grid-elementor-addon' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
@@ -217,7 +217,7 @@ final class Elementor_Post_Grid {
 		\Nilambar\AdminNotice\Notice::init(
 			array(
 				'slug' => PGEA_SLUG,
-				'name' => esc_html__( 'Post Grid Elementor Addon', 'post-grid-elementor-addon' ),
+				'name' => esc_html__( 'Post Grid Addon for Elementor', 'post-grid-elementor-addon' ),
 			)
 		);
 	}

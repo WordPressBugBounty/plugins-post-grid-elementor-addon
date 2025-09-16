@@ -14,9 +14,9 @@ add_action(
 
 		$obj->set_page(
 			array(
-				'page_title'     => esc_html__( 'Post Grid Elementor Addon', 'post-grid-elementor-addon' ),
+				'page_title'     => esc_html__( 'Post Grid Addon for Elementor', 'post-grid-elementor-addon' ),
 				'page_subtitle'  => sprintf( esc_html__( 'Version: %s', 'post-grid-elementor-addon' ), PGEA_VERSION ),
-				'menu_title'     => esc_html__( 'Post Grid Elementor Addon', 'post-grid-elementor-addon' ),
+				'menu_title'     => esc_html__( 'Post Grid Addon for Elementor', 'post-grid-elementor-addon' ),
 				'menu_slug'      => 'pgea-welcome',
 				'menu_icon'      => 'dashicons-admin-site-alt3',
 				'top_level_menu' => true,
@@ -239,7 +239,7 @@ function pgea_render_welcome_page_sidebar( $welcome_object ) {
 		array(
 			'title'   => esc_html__( 'Our Plugins', 'post-grid-elementor-addon' ),
 			'content' => '<ol><li><a href="https://wphait.com/plugins/nifty-coming-soon-and-under-construction-page/" target="_blank">Coming Soon & Maintenance Mode Page</a></li>
-			<li><a href="https://wphait.com/plugins/post-grid-elementor-addon/" target="_blank">Post Grid Elementor Addon</a></li>
+			<li><a href="https://wphait.com/plugins/post-grid-elementor-addon/" target="_blank">Post Grid Addon for Elementor</a></li>
 			</ol>',
 		),
 		$welcome_object

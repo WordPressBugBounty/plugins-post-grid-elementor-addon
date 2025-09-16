@@ -1,4 +1,4 @@
-=== Post Grid Elementor Addon ===
+=== Post Grid Addon for Elementor ===
 
 Contributors: hookandhook
 Tags: post grid, blog post grid, elementor, post grid for elementor, elementor addons, elementor page builder, grid post, grid layout, post grids, widget, add-ons, page builder, blog post, blog, elementor post grid, post grid elementor, responsive post grid, grid layout for blog posts, post grid display
@@ -6,13 +6,13 @@ Donate Link: https://wphait.com/plugins/post-grid-elementor-addon/
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 2.0.21
+Stable tag: 2.0.22
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Elementor page builder addon to display posts in a grid. Useful for generating post grid from your blog posts with multiple options.
+Addon for the Elementor page builder to display posts in a grid. Useful for generating post grid from your blog posts with multiple options.
 
 [View Demo](https://dandure.com/post-grid-elementor-addon/) | [View Details](https://wphait.com/plugins/post-grid-elementor-addon/) | [Support](https://wordpress.org/support/plugin/post-grid-elementor-addon/) | [Buy Pro](https://wphait.com/plugins/post-grid-elementor-addon/)
 
@@ -44,15 +44,15 @@ Elementor page builder addon to display posts in a grid. Useful for generating p
 
 == Installation ==
 
-1. Go to Plugins > Add New and search for Post Grid Elementor Addon , install and activate it.
+1. Go to Plugins > Add New and search for Post Grid Addon for Elementor, install and activate it.
 2. We are good to go. No configuration needed.
-3. Post Grid is added under WPC Elements on Elementor page customization panel.
+3. The Post Grid Addon is added under WPC Elements on the Elementor page customization panel.
 
 == Frequently Asked Questions ==
 
 = Does the plugin require Elementor? =
 
-Yes, this is an addon of the Elementor page builder. so it needs Elementor to be installed and activated to work.
+Yes, this is an addon for the Elementor page builder, so it needs Elementor to be installed and activated to work.
 
 = Does this plugin work with all themes? =
 
@@ -79,6 +79,9 @@ No, the free version of this plugin does not have pagination. You need to upgrad
 6. Curve Image Layout
 
 == Changelog ==
+
+= 2.0.22 - 2025-09-16 =
+- Rename plugin
 
 = 2.0.21 - 2025-04-25 =
 - Update tested up to 6.8 + fix PHP errors in vendor/ernilambar/wp-welcome
@@ -183,4 +186,4 @@ No, the free version of this plugin does not have pagination. You need to upgrad
 
 == Upgrade Notice ==
 
-Post Grid Elementor Addon
+Post Grid Addon for Elementor
