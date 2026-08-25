@@ -4,17 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc49141fff385233f6c1c0d1c15024f92
+class ComposerStaticInit34f8144e99cffece52180b697b8c1567
 {
     public static $prefixLengthsPsr4 = array (
-        'N' => 
+        'N' =>
         array (
             'Nilambar\\AdminNotice\\' => 21,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Nilambar\\AdminNotice\\' => 
+        'Nilambar\\AdminNotice\\' =>
         array (
             0 => __DIR__ . '/..' . '/ernilambar/wp-admin-notice/src',
         ),
@@ -28,9 +28,9 @@ class ComposerStaticInitc49141fff385233f6c1c0d1c15024f92
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc49141fff385233f6c1c0d1c15024f92::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc49141fff385233f6c1c0d1c15024f92::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc49141fff385233f6c1c0d1c15024f92::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit34f8144e99cffece52180b697b8c1567::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit34f8144e99cffece52180b697b8c1567::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit34f8144e99cffece52180b697b8c1567::$classMap;
 
         }, null, ClassLoader::class);
     }
